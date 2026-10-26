@@ -325,7 +325,7 @@ static struct
     bool connected; // Currently has an active XInput device
     bool used;      // Is currently mapped to an SDL device
     Uint8 correlation_id;
-} xinput_state[XUSER_MAX_COUNT];
+} xinput_state[8];
 static bool xinput_device_change = true;
 static bool xinput_state_dirty = true;
 
@@ -400,6 +400,8 @@ static bool RAWINPUT_XInputSlotMatches(const WindowsMatchState *state, Uint8 slo
 
 static bool RAWINPUT_GuessXInputSlot(const WindowsMatchState *state, Uint8 *correlation_id, Uint8 *slot_idx)
 {
+	slot_idx = -1;
+	return false; // Disabled so we can use DirectInput instead
     Uint8 user_index;
     int match_count;
 

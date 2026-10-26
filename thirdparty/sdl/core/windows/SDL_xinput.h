@@ -37,7 +37,7 @@ using namespace XInputOnGameInput;
 #endif // HAVE_XINPUT_H
 
 #ifndef XUSER_MAX_COUNT
-#define XUSER_MAX_COUNT 4
+#define XUSER_MAX_COUNT 0
 #endif
 #ifndef XUSER_INDEX_ANY
 #define XUSER_INDEX_ANY 0x000000FF

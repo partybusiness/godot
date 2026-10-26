@@ -1780,6 +1780,7 @@ const char *SDL_GetJoystickPath(SDL_Joystick *joystick)
  */
 int SDL_GetJoystickPlayerIndex(SDL_Joystick *joystick)
 {
+	return -1;
     int result;
 
     SDL_LockJoysticks();
@@ -3107,7 +3108,7 @@ bool SDL_IsJoystickSteamDeck(Uint16 vendor_id, Uint16 product_id)
 
 bool SDL_IsJoystickXInput(SDL_GUID guid)
 {
-    return (guid.data[14] == 'x') ? true : false;
+    return (guid.data[14] == 'x') ? false : false;
 }
 
 bool SDL_IsJoystickWGI(SDL_GUID guid)
