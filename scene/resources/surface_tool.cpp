@@ -1234,7 +1234,7 @@ void SurfaceTool::clear() {
 }
 
 void SurfaceTool::set_skin_weight_count(SkinWeightCount p_weights) {
-	ERR_FAIL_COND(begun);
+	ERR_FAIL_COND(!vertex_array.is_empty());
 	skin_weights = p_weights;
 }
 SurfaceTool::SkinWeightCount SurfaceTool::get_skin_weight_count() const {
